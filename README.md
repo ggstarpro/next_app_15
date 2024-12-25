@@ -1,9 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
-
-First, run the development server:
-
 ```bash
 npm run dev
 # or
@@ -14,23 +9,48 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 認証サービス
+## [Clerk](https://clerk.com/)
+* `$npm install @clerk/nextjs`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* add Endpointを押下
+```
+`[:ngrok:]/api/callback/clerk`
+✅ user.created
+✅ user.updated
+create
+```
+* npm install svix
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Email, phone, username > Username
+ON Username
 
-## Learn More
+# DB
+## [supabase](https://supabase.com/)
+### follow
+* followrid: (ログインしている人ID)user_2qhX0U2wkYjYuMbT53juNxk5lMN
+* followingId: user_2qgfDWvHGIw1Nzn6gHudzLBrNtf
 
-To learn more about Next.js, take a look at the following resources:
+# DB操作
+## [Prisma](https://www.prisma.io/nextjs)
+* npm install prisma --save-dev
+* npx prisma init
+* npx prisma migrate dev --name init
+** 修正後の更新
+* npx prisma migrate dev --name email-schema-deleted-from-user-model
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ngrok
+* brew install ngrok
+* ngrok http 3001
+* https://xxxxxxxxxx.ngrok-free.app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# zod
+* npm i zod
 
-## Deploy on Vercel
+# AI参考
+## [v0.dev](https://v0.dev/)
+## https://claude.ai/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+HelloWorld
+test@example.com
+KJUno13odsk2
