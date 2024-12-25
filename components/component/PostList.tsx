@@ -7,7 +7,7 @@ import { auth } from "@clerk/nextjs/server";
 import { fetchPosts } from "@/lib/postDataFetcher";
 import Post from "@/components/component/Post";
 
-export default async function PostList() {
+export default async function PostList({username}: {username?: string}) {
   // const posts = [
   //   {
   //     id: 1,
@@ -34,12 +34,14 @@ export default async function PostList() {
   if (!userId) {
     return;
   }
-  const posts = await fetchPosts(userId)
-
+  const posts = await fetchPosts(userId, username)
+  // api/posts/route.tsを作成して下記のようにすることもできるが、、、
+  // APIを公開しない場合は下記のようにする必要はない。
+  // const posts = await fetch("htttp://localhost:3000/api/posts")
 
   return (
     <div className="space-y-4">
-      {posts.length ? posts.map((post) => (
+      {posts ? posts.map((post) => (
         <Post key={post.id} post={post} />
       )): <div>ポストが見つかりません</div>}
     </div>

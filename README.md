@@ -27,6 +27,9 @@ ON Username
 
 # DB
 ## [supabase](https://supabase.com/)
+### follow
+* followrid: (ログインしている人ID)user_2qhX0U2wkYjYuMbT53juNxk5lMN
+* followingId: user_2qgfDWvHGIw1Nzn6gHudzLBrNtf
 
 # DB操作
 ## [Prisma](https://www.prisma.io/nextjs)
@@ -47,3 +50,7 @@ ON Username
 # AI参考
 ## [v0.dev](https://v0.dev/)
 ## https://claude.ai/
+
+HelloWorld
+test@example.com
+KJUno13odsk2
